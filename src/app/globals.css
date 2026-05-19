@@ -1,4 +1,26 @@
 @import "tailwindcss";
 @import "@heroui/styles"; 
-@plugin "daisyui";
 
+.badge {
+  border: 1.5px solid transparent;
+  animation: borderGlow 2s ease-in-out infinite;
+}
+
+@keyframes borderGlow {
+  0%   { border-color: rgba(0, 180, 140, 0.2); }
+  50%  { border-color: rgba(0, 200, 155, 0.9);
+         box-shadow: 0 0 10px rgba(0, 200, 155, 0.4); }
+  100% { border-color: rgba(0, 180, 140, 0.2); }
+}
+
+
+
+@keyframes floatLoop {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.img-side {
+  animation: floatLoop 4s ease-in-out infinite;
+}
