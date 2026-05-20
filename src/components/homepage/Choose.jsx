@@ -4,6 +4,7 @@ import ImgOne from "../../../public/images/Designer (2).png";
 import ImgTwo from "../../../public/images/Designer (3).png";
 import ImgThree from "../../../public/images/Designer (4).png";
 import { GoCheckCircleFill } from "react-icons/go";
+import { Button } from "@heroui/react";
 
 const Choose = () => {
   return (
@@ -73,6 +74,10 @@ const Choose = () => {
               journey effortlessly.
             </p>
           </div>
+        </div>
+
+        <div className="flex justify-center lg:justify-normal">
+        <Button className="bg-[#00655C] mt-7 text-white rounded-xl  lg:w-full">Discover More Features</Button>
         </div>
       </div>
     </div>

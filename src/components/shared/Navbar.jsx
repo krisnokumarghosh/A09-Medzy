@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Drawer } from "@heroui/react";
 import { Bars, Briefcase, FolderOpenFill, HouseFill } from "@gravity-ui/icons";
 import Navlink from "./Navlink";
+import { FaBars, FaStethoscope } from "react-icons/fa";
 
 const Navbar = () => {
   return (
@@ -11,7 +12,7 @@ const Navbar = () => {
         <div className="lg:hidden ">
           <Drawer >
             <Button className="bg-transparent text-[#00655C]">
-              <Bars />
+              <FaBars />
             </Button>
             <Drawer.Backdrop >
               <Drawer.Content  placement="left">
@@ -53,7 +54,10 @@ const Navbar = () => {
             </Drawer.Backdrop>
           </Drawer>
         </div>
-        <Link href={"/"}>
+        <Link href={"/"} className="flex gap-3">
+        <div className="bg-[#00655C] rounded-lg p-2">
+    <FaStethoscope className="text-white text-xl" />
+  </div>
           <h1 className="text-[#00655C] font-bold text-[24px]">Medzy</h1>
         </Link>
       </div>

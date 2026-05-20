@@ -1,3 +1,4 @@
+import Footer from "@/components/shared/Footer";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import { plusJakartaSans } from "@/lib/font";
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col bg-[#E0F2F1]">
         <Navbar></Navbar>
         <main>{children}</main>
+        <Footer></Footer>
       </body>
     </html>
   );
