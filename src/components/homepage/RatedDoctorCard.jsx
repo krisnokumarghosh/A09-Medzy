@@ -2,6 +2,7 @@ import { Button, Card, Chip } from "@heroui/react";
 import Image from "next/image";
 import React from "react";
 import { IoStarSharp } from "react-icons/io5";
+// import docImg from "../../../public/images/Designer (1).png"
 
 const RatedDoctorCard = ({ doctor }) => {
   return (
@@ -11,7 +12,7 @@ const RatedDoctorCard = ({ doctor }) => {
         height={256}
         width={368}
         src={doctor.image}
-        className="rounded-xl hover:scale-103 transition-all duration-500 rounded-b-none h-48 md:h-64 w-full md:w-92 object-cover"
+        className="rounded-xl hover:scale-103 transition-all duration-500 rounded-b-none h-48 md:h-64 w-full md:w-92 object-cover "
       />
 
       <div className="px-5">

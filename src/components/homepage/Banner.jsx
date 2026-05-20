@@ -14,7 +14,7 @@ import { CgDropOpacity } from "react-icons/cg";
 
 const Banner = () => {
   return (
-    <div className="mb-25">
+    <div className="mb-13 md:mb-25">
       <div className="container mx-auto lg:flex items-center justify-around">
         <div className="space-y-6 text-center lg:text-left">
           <Chip className="text-[#006F66] badge gap-1 px-4 py-1 text-[13px] bg-[#92F0E4] font-semibold">

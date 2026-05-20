@@ -7,7 +7,7 @@ const RatedDoctors = async () => {
   console.log(ratedDoctors);
 
   return (
-    <div className="container mx-auto mb-25">
+    <div className="container mx-auto mb-13 md:mb-25">
       <h2 className="font-semibold text-center text-[23px] md:text-[32px] text-[#151D1D]">
         Top Rated Doctors
       </h2>
