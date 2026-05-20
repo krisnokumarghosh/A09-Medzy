@@ -7,7 +7,7 @@ import { SlCalender } from "react-icons/sl";
 
 const Work = () => {
   return (
-    <div className=" mb-25 bg-[#ECF5F4] py-10 md:py-16">
+    <div className=" mb-13 md:mb-25 bg-[#ECF5F4] py-10 md:py-16">
       <h2 className="font-semibold text-center text-[23px] md:text-[32px] text-[#151D1D]">
         How It Works
       </h2>

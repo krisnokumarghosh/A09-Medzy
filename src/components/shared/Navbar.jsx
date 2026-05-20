@@ -58,7 +58,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div>
-        <ul className="hidden lg:flex gap-6 items-center text-[#3E4947]">
+        <ul className="hidden lg:flex gap-6 items-center text-[#3E4947] backdrop-blur-sm bg-cyan-50/40 rounded-full border border-white/50 shadow-md px-7 py-3">
           <li>
             <Navlink className="py-2" href={"/"}>
               Home
@@ -78,8 +78,8 @@ const Navbar = () => {
       </div>
 
       <div className="flex gap-3 ">
-        <Button className="bg-[#00655C] rounded-xl px-6">Login</Button>
-        <Button className="bg-[#00655C] rounded-xl hidden md:flex">Register</Button>
+        <Button className="bg-[#00655C] rounded-full px-6">Login</Button>
+        <Button className="bg-[#00655C] rounded-full hidden md:flex">Register</Button>
       </div>
     </div>
   );

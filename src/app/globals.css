@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "@heroui/styles";
 
-.badge {
+.badge-glow {
   border: 1.5px solid transparent;
   animation: borderGlow 2s ease-in-out infinite;
 }

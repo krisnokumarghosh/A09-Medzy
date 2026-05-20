@@ -17,7 +17,7 @@ const Banner = () => {
     <div className="mb-13 md:mb-25">
       <div className="container mx-auto lg:flex items-center justify-around">
         <div className="space-y-6 text-center lg:text-left">
-          <Chip className="text-[#006F66] badge gap-1 px-4 py-1 text-[13px] bg-[#92F0E4] font-semibold">
+          <Chip className="text-[#006F66] badge-glow gap-1 px-4 py-1 text-[13px] bg-[#92F0E4] font-semibold">
             <IoShieldCheckmark /> Certified Medical Network
           </Chip>
           <h1 className=" text-[29px] md:text-[47px] font-bold text-[#151D1D]">
