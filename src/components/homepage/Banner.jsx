@@ -2,7 +2,7 @@ import { Button, Chip } from "@heroui/react";
 import Image from "next/image";
 import React from "react";
 import { FaCalendar } from "react-icons/fa";
-import { IoShieldCheckmark } from "react-icons/io5";
+import { IoShieldCheckmark, IoStarSharp } from "react-icons/io5";
 import bannerImg from "../../../public/images/banner.png";
 import Marquee from "react-fast-marquee";
 import { MdOutlineSupportAgent } from "react-icons/md";
@@ -37,14 +37,21 @@ const Banner = () => {
             </Button>
           </div>
         </div>
-        <div className="relative">
+        <div className="relative img-side">
           <Image
             alt="banner image"
             height={500}
             width={544}
             src={bannerImg}
-            className="rounded-3xl img-side mt-10 w-55 md:w-136 lg:mt-0 mx-auto lg:mx-0 "
+            className="rounded-3xl  mt-10 w-55 md:w-136 lg:mt-0 mx-auto lg:mx-0 "
           />
+          <div className="absolute bottom-2 left-17 md:left-31 lg:left-3  backdrop-blur-md bg-cyan-50/40 rounded-2xl border border-white/50 shadow-md p-2 md:p-6 max-w-45 ">
+            <h3 className="font-bold text-[12px] md:text-[24px] text-[#00655C]">4.9/5</h3>
+            <div className="flex text-xs md:text-lg items-center gap-1 text-[#A42F11]">
+              <IoStarSharp /><IoStarSharp /><IoStarSharp /><IoStarSharp /><IoStarSharp />
+            </div>
+            <p className="text-[8px] md:text-[12px] text-[#3E4947] font-semibold">Average Patient Rating</p>
+          </div>
         </div>
       </div>
       <div className="bg-[#00655C] p-4 md:p-6 mt-10">
