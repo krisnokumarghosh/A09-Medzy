@@ -23,7 +23,7 @@ const Banner = () => {
           <h1 className=" text-[29px] md:text-[47px] font-bold text-[#151D1D]">
             Your Health, Our <br /> Priority
           </h1>
-          <p className=" text-[14px] md:text-[18px] text-[#3E4947] max-w-123 mx-auto lg:mx-0">
+          <p className=" text-[14px] md:text-[18px] text-[#3E4947] md:w-123 w-65 mx-auto lg:mx-0">
             Experience clinical precision fused with organic warmth. Book
             appointments with top-rated doctors in minutes and start your
             journey to renewed vitality.

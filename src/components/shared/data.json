@@ -56,7 +56,7 @@
     "description": "Dr. Farhana Islam is a dedicated gynecologist specializing in women's reproductive healthcare and pregnancy management. She provides treatment for infertility, menstrual disorders, and gynecological complications. Her consultations are designed to create a comfortable and supportive environment for patients. She believes in educating women about preventive healthcare and wellness. Dr. Farhana is experienced in handling both routine and high-risk pregnancies with care. Patients trust her for her compassionate communication and medical expertise. She remains committed to improving women's health through modern treatment methods.",
     "hospital": "Ibn Sina Hospital",
     "location": "Mirpur, Dhaka",
-    "rating": 4.8,
+    "rating": 4.7,
     "fee": 850
   },
   {
@@ -92,7 +92,7 @@
     "description": "Dr. Samiha Noor is a professional psychiatrist dedicated to mental health and emotional wellbeing. She provides counseling and treatment for anxiety, depression, stress, and behavioral disorders. Her treatment plans combine therapy, lifestyle improvement, and medication management when necessary. She creates a supportive and confidential environment for patients during consultations. Dr. Samiha values compassionate communication and patient-centered mental healthcare. She has successfully helped many individuals recover from long-term emotional challenges. Her goal is to improve mental wellness through effective psychiatric care.",
     "hospital": "MindCare Clinic",
     "location": "Banani, Dhaka",
-    "rating": 4.9,
+    "rating": 4.6,
     "fee": 1500
   },
   {
@@ -116,7 +116,7 @@
     "description": "Dr. Jannatul Ferdous is a reputed ophthalmologist specializing in eye diseases and vision correction treatments. She provides expert care for cataracts, glaucoma, retinal disorders, and eye infections. Her consultations include detailed eye examinations and personalized treatment plans. She uses advanced medical technologies for accurate diagnosis and effective procedures. Patients appreciate her calm communication style and caring attitude. Dr. Jannatul strongly believes in preventive eye care and regular vision checkups. She remains dedicated to improving vision health for patients of all ages.",
     "hospital": "National Eye Hospital",
     "location": "Shahbagh, Dhaka",
-    "rating": 4.8,
+    "rating": 4.7,
     "fee": 900
   },
   {
@@ -140,7 +140,7 @@
     "description": "Dr. Rafia Sultana specializes in hormonal and metabolic disorders including diabetes and thyroid diseases. She creates personalized treatment plans according to each patient's health condition and lifestyle. Her approach emphasizes preventive healthcare and long-term disease management. She carefully monitors patient progress through regular consultations and testing. Dr. Rafia believes in educating patients about healthy lifestyle habits and medical awareness. Patients respect her supportive communication style and detailed guidance. Her commitment to endocrine healthcare has made her highly appreciated among patients.",
     "hospital": "Bangabandhu Sheikh Mujib Medical University",
     "location": "Shahbagh, Dhaka",
-    "rating": 4.8,
+    "rating": 4.5,
     "fee": 1100
   }
 ]

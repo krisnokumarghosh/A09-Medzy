@@ -8,19 +8,19 @@ const Navbar = () => {
   return (
     <div className="bg-[#ECF5F4] py-4 px-3 md:px-16 flex items-center justify-between mb-13 md:mb-25">
       <div className="flex items-center ">
-        <div className="lg:hidden">
-          <Drawer>
+        <div className="lg:hidden ">
+          <Drawer >
             <Button className="bg-transparent text-[#00655C]">
               <Bars />
             </Button>
-            <Drawer.Backdrop>
-              <Drawer.Content placement="left">
+            <Drawer.Backdrop >
+              <Drawer.Content  placement="left">
                 <Drawer.Dialog>
                   <Drawer.CloseTrigger />
                   <Drawer.Header>
                     <Drawer.Heading>Pages</Drawer.Heading>
                   </Drawer.Header>
-                  <Drawer.Body>
+                  <Drawer.Body >
                     <nav className="flex flex-col gap-6">
                       <li>
                         <Navlink
