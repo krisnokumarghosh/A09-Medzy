@@ -1,6 +1,6 @@
 import { ratedDoctorsData } from "@/lib/api-fetch";
 import React from "react";
-import RatedDoctorCard from "./RatedDoctorCard";
+import DoctorCard from "../shared/DoctorCard";
 
 const RatedDoctors = async () => {
   const ratedDoctors = await ratedDoctorsData();
@@ -17,7 +17,7 @@ const RatedDoctors = async () => {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-5 mt-10">
         {ratedDoctors.map((doctor) => {
-          return <RatedDoctorCard key={doctor._id} doctor={doctor}></RatedDoctorCard>;
+          return <DoctorCard key={doctor._id} doctor={doctor}></DoctorCard>;
         })}
       </div>
     </div>

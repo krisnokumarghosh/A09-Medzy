@@ -2,9 +2,8 @@ import { Button, Card, Chip } from "@heroui/react";
 import Image from "next/image";
 import React from "react";
 import { IoStarSharp } from "react-icons/io5";
-// import docImg from "../../../public/images/Designer (1).png"
 
-const RatedDoctorCard = ({ doctor }) => {
+const DoctorCard = ({ doctor }) => {
   return (
     <Card className="p-0 w-65 md:w-92 pb-5 hover:scale-102 transition-all duration-500">
       <Image
@@ -34,4 +33,4 @@ const RatedDoctorCard = ({ doctor }) => {
   );
 };
 
-export default RatedDoctorCard;
+export default DoctorCard;

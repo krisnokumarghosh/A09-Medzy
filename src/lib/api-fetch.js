@@ -4,3 +4,9 @@ export const ratedDoctorsData = async () => {
 
   return data;
 };
+
+export const allDoctors = async () => {
+  const res = await fetch("http://localhost:8000/all-doctors");
+  const data = await res.json();
+  return data;
+};
