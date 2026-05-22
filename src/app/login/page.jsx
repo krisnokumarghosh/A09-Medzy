@@ -1,5 +1,7 @@
 "use client";
 
+import { authClient } from "@/lib/auth-client";
+import { errorToast, successToast } from "@/lib/toasts";
 import {
   Button,
   Description,
@@ -11,9 +13,29 @@ import {
   TextField,
 } from "@heroui/react";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { FcGoogle } from "react-icons/fc";
 
 const LoginPage = () => {
+  const handleLogIn = async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.currentTarget);
+    const user = Object.fromEntries(formData.entries());
+
+    const { data, error } = await authClient.signIn.email({
+      email: user.email,
+      password: user.password,
+    });
+
+    if (data) {
+      successToast("Login Successfull");
+      redirect("/");
+    } else {
+      errorToast(error.message);
+    }
+  };
+
   return (
     <div className="container  mx-auto grid lg:grid-cols-2 justify-items-center items-center">
       <div>
@@ -30,7 +52,9 @@ const LoginPage = () => {
         <h3 className="text-[32px] font-semibold text-[#151D1D] mb-8 md:mb-16">
           Login
         </h3>
-        <Form className="">
+        <Form
+        onSubmit={handleLogIn}
+        >
           <TextField
             isRequired
             name="email"

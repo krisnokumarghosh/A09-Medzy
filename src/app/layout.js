@@ -2,6 +2,7 @@ import Footer from "@/components/shared/Footer";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import { plusJakartaSans } from "@/lib/font";
+import { Toaster } from "react-hot-toast";
 
 
 export const metadata = {
@@ -20,6 +21,8 @@ export default function RootLayout({ children }) {
         <Navbar></Navbar>
         <main>{children}</main>
         <Footer></Footer>
+
+        <Toaster position="top-right"/>
       </body>
     </html>
   );

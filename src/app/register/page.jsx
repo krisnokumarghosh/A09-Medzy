@@ -14,8 +14,33 @@ import Image from "next/image";
 import { FcGoogle } from "react-icons/fc";
 import registerImage from "../../../public/images/Overlay+Shadow.png";
 import Link from "next/link";
+import { authClient } from "@/lib/auth-client";
+import { errorToast, successToast } from "@/lib/toasts";
+import { redirect } from "next/navigation";
 
 const RegisterPage = () => {
+  const handleSignUp = async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.currentTarget);
+    const user = Object.fromEntries(formData.entries());
+    console.log(user);
+
+    const { data, error } = await authClient.signUp.email({
+      name: user.name,
+      email: user.email,
+      password: user.password,
+      image: user.image,
+    });
+
+    if (data) {
+      successToast("Registration Successfull");
+      redirect("/login");
+    } else {
+      errorToast(error.message);
+    }
+  };
+
   return (
     <div className="container  mx-auto grid lg:grid-cols-2 justify-items-center items-center">
       <div>
@@ -40,7 +65,7 @@ const RegisterPage = () => {
         <h3 className="text-[32px] font-semibold text-[#151D1D] mb-8 md:mb-10">
           Register
         </h3>
-        <Form>
+        <Form onSubmit={handleSignUp}>
           <TextField isRequired name="name" type="text" className="mb-6">
             <Label className="text-[#3E4947] font-medium text-[14px]">
               Name
