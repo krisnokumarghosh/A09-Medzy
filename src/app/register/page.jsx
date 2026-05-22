@@ -10,27 +10,57 @@ import {
   Separator,
   TextField,
 } from "@heroui/react";
-import Link from "next/link";
+import Image from "next/image";
 import { FcGoogle } from "react-icons/fc";
+import registerImage from "../../../public/images/Overlay+Shadow.png";
+import Link from "next/link";
 
-const LoginPage = () => {
+const RegisterPage = () => {
   return (
     <div className="container  mx-auto grid lg:grid-cols-2 justify-items-center items-center">
       <div>
         <h1 className=" text-[27px] md:text-[48px] font-bold text-[#00655C] w-70 md:w-136 mx-auto">
-          Welcome back to your{" "}
-          <span className="text-[#A42F11]">Renewed Vitality</span> journey.
+          Your path to <span className="text-[#A42F11]">Renewed Vitality</span>{" "}
+          starts here.
         </h1>
         <p className="text-[14px] md:text-[18px] text-[#3E4947] w-70 md:w-136 mt-6 mx-auto ">
-          Your appointments and health records are waiting. Sign in to continue.
+          Join Fresh Mint today to manage your health appointments with clinical
+          precision and organic warmth.
         </p>
+        <Image
+          alt="login image"
+          height={384}
+          width={544}
+          src={registerImage}
+          className="mt-7 mx-auto w-70 md:w-136 mb-5 lg:mb-0"
+        />
       </div>
 
-      <div className="bg-white px-7 py-12 md:p-16 w-75 md:w-md mx-auto rounded-xl mt-10 lg:mt-0 shadow-lg shadow-[#008075]/30">
-        <h3 className="text-[32px] font-semibold text-[#151D1D] mb-8 md:mb-16">
-          Login
+      <div className="bg-white px-7 py-12 md:p-16 w-75 md:w-md mx-auto rounded-xl mt-6 lg:mt-0 shadow-lg shadow-[#008075]/30">
+        <h3 className="text-[32px] font-semibold text-[#151D1D] mb-8 md:mb-10">
+          Register
         </h3>
-        <Form className="">
+        <Form>
+          <TextField isRequired name="name" type="text" className="mb-6">
+            <Label className="text-[#3E4947] font-medium text-[14px]">
+              Name
+            </Label>
+            <Input
+              className="bg-[#ECF5F4] shadow-none border border-[#92F0E4]  md:p-3.5"
+              placeholder="Enter your name"
+            />
+            <FieldError />
+          </TextField>
+          <TextField isRequired name="image" type="text" className="mb-6">
+            <Label className="text-[#3E4947] font-medium text-[14px]">
+              Image URL
+            </Label>
+            <Input
+              className="bg-[#ECF5F4] shadow-none border border-[#92F0E4]  md:p-3.5"
+              placeholder="Enter Image URL"
+            />
+            <FieldError />
+          </TextField>
           <TextField
             isRequired
             name="email"
@@ -85,7 +115,7 @@ const LoginPage = () => {
               className="w-full bg-[#C64728] rounded-xl text-white"
               type="submit"
             >
-              Sign In
+              Sign Up
             </Button>
           </div>
         </Form>
@@ -102,9 +132,9 @@ const LoginPage = () => {
         </Button>
 
         <p className="mt-8 md:mt-16 text-[#3E4947] text-center">
-          Dont have an account ?{" "}
-          <Link href={"/register"}>
-            <span className=" font-bold text-[#00655C]">Register</span>
+          Already have an account ?{" "}
+          <Link href={"/login"}>
+            <span className=" font-bold text-[#00655C]">Login</span>
           </Link>
         </p>
       </div>
@@ -112,4 +142,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default RegisterPage;

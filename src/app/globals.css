@@ -35,7 +35,4 @@
   animation: floatLoop 4s ease-in-out infinite;
 }
 
-.img-side-delay {
-  animation: floatLoop 4s ease-in-out infinite;
-  animation-delay: 3.5s;
-}
+

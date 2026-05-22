@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { FaFacebook, FaStethoscope } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaHeartPulse, FaXTwitter } from "react-icons/fa6";
 import { RiInstagramFill } from "react-icons/ri";
 
 const Footer = () => {
@@ -12,7 +12,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-3 mb-3">
               <div className="bg-white rounded-lg p-2">
-                <FaStethoscope className="text-[#00655C] text-xl" />
+                <FaHeartPulse className="text-[#00655C] text-xl" />
               </div>
               <span className="text-xl font-medium">Medzy</span>
             </div>

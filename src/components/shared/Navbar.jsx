@@ -4,24 +4,25 @@ import { Drawer } from "@heroui/react";
 import { Bars, Briefcase, FolderOpenFill, HouseFill } from "@gravity-ui/icons";
 import Navlink from "./Navlink";
 import { FaBars, FaStethoscope } from "react-icons/fa";
+import { FaHeartPulse } from "react-icons/fa6";
 
 const Navbar = () => {
   return (
     <div className="bg-[#ECF5F4] py-4 px-3 md:px-16 flex items-center justify-between mb-13 md:mb-25">
       <div className="flex items-center ">
         <div className="lg:hidden ">
-          <Drawer >
+          <Drawer>
             <Button className="bg-transparent text-[#00655C]">
               <FaBars />
             </Button>
-            <Drawer.Backdrop >
-              <Drawer.Content  placement="left">
+            <Drawer.Backdrop>
+              <Drawer.Content placement="left">
                 <Drawer.Dialog>
                   <Drawer.CloseTrigger />
                   <Drawer.Header>
                     <Drawer.Heading>Pages</Drawer.Heading>
                   </Drawer.Header>
-                  <Drawer.Body >
+                  <Drawer.Body>
                     <nav className="flex flex-col gap-6">
                       <li>
                         <Navlink
@@ -55,9 +56,9 @@ const Navbar = () => {
           </Drawer>
         </div>
         <Link href={"/"} className="flex gap-3">
-        <div className="bg-[#00655C] rounded-lg p-2">
-    <FaStethoscope className="text-white text-xl" />
-  </div>
+          <div className="bg-[#00655C] rounded-lg p-2">
+            <FaHeartPulse className="text-white text-xl" />
+          </div>
           <h1 className="text-[#00655C] font-bold text-[24px]">Medzy</h1>
         </Link>
       </div>
@@ -82,8 +83,14 @@ const Navbar = () => {
       </div>
 
       <div className="flex gap-3 ">
-        <Button className="bg-[#00655C] rounded-full px-6">Login</Button>
-        <Button className="bg-[#00655C] rounded-full hidden md:flex">Register</Button>
+        <Link href={"/login"}>
+          <Button className="bg-[#00655C] rounded-full px-6">Login</Button>
+        </Link>
+        <Link href={"/register"}>
+          <Button className="bg-[#00655C] rounded-full hidden md:flex">
+            Register
+          </Button>
+        </Link>
       </div>
     </div>
   );
