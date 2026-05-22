@@ -1,11 +1,12 @@
 import { Button, Card, Chip } from "@heroui/react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { IoStarSharp } from "react-icons/io5";
 
 const DoctorCard = ({ doctor }) => {
   return (
-    <Card className="p-0 w-65 md:w-92 pb-5 hover:scale-102 transition-all duration-500">
+    <Card className="p-0 w-65 md:w-92 pb-5 hover:scale-102 transition-all duration-500 md:mt-5 lg:mt-8">
       <Image
         alt="doctor image"
         height={256}
@@ -27,7 +28,9 @@ const DoctorCard = ({ doctor }) => {
 
         <p className="text-[12px] md:text-[14px] mt-2 text-[#00655C]">{doctor.specialty}</p>
 
+        <Link href={`/all-appointment/${doctor._id}`}>
         <Button className="text-[#00655C] hover:bg-[#00655C] hover:text-white transition-all duration-300 bg-[#E7F0EF] w-full mt-5 text-[12px] md:text-[14px]">View Details</Button>
+        </Link>
       </div>
     </Card>
   );

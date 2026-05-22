@@ -1,8 +1,8 @@
-'use client'
+"use client";
 
 import DoctorCard from "@/components/shared/DoctorCard";
 import { allDoctors } from "@/lib/api-fetch";
-import { Label, SearchField } from "@heroui/react";
+import { Label, SearchField, Spinner } from "@heroui/react";
 import React, { useEffect, useState } from "react";
 
 const AllAppointmentPage = () => {
@@ -15,7 +15,7 @@ const AllAppointmentPage = () => {
       setTimeout(() => {
         setDoctors(data);
         setLoading(false);
-      }, 500);
+      }, 250);
     };
     getDoctorsData();
   }, []);
@@ -32,19 +32,18 @@ const AllAppointmentPage = () => {
           placeholder="Search Doctors..."
         />
       </div>
-      {
-        
-      }
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center mt-20 space-y-10">
-        {
-          doctors.map(doctor => {
-            return(
-              <DoctorCard key={doctor._id} doctor={doctor}>
-              </DoctorCard>
-            )
-          })
-        }
-      </div>
+      {loading ? (
+        <div className=" flex justify-center my-25 ">
+          <Spinner className="text-[#008075] hidden md:flex" size="xl" />
+          <Spinner className="text-[#008075] md:hidden" size="md" />
+        </div>
+      ) : (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center mt-20 ">
+          {doctors.map((doctor) => {
+            return <DoctorCard key={doctor._id} doctor={doctor}></DoctorCard>;
+          })}
+        </div>
+      )}
     </div>
   );
 };
