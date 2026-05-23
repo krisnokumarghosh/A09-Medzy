@@ -1,22 +1,9 @@
-import { getBookedData } from "@/lib/api-fetch";
-import { auth } from "@/lib/auth";
 import { Button, Card, Chip } from "@heroui/react";
-import { headers } from "next/headers";
+
 import Image from "next/image";
 import React from "react";
 
-const MyBookings = async () => {
-  const session = await auth.api.getSession({
-    headers: await headers(),
-  });
-  const user = session?.user;
-  console.log(user);
-
-  const userID = user?.id;
-
-  const bookedData = await getBookedData(userID);
-  console.log(bookedData);
-
+const MyBookings = ({ bookedData }) => {
   return (
     <div className="space-y-8">
       {bookedData.map((data) => {
@@ -60,8 +47,12 @@ const MyBookings = async () => {
               </div>
 
               <div className="flex md:flex-col justify-center md:justify-items-normal gap-3 mt-4 md:mt-0">
-               <Button className="rounded-xl bg-transparent text-[#00655C] border border-[#00655C]">Update</Button>
-               <Button className="rounded-xl bg-transparent text-red-500 border border-red-500">Cancle</Button>
+                <Button className="rounded-xl bg-transparent text-[#00655C] border border-[#00655C]">
+                  Update
+                </Button>
+                <Button className="rounded-xl bg-transparent text-red-500 border border-red-500">
+                  Cancle
+                </Button>
               </div>
             </div>
           </Card>
