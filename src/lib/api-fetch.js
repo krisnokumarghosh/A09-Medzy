@@ -16,3 +16,10 @@ export const singleDoctorData = async (id) => {
   const data = await res.json();
   return data;
 };
+
+
+export const getBookedData = async (userID) => {
+  const res = await fetch(`http://localhost:8000/bookings/${userID}`);
+  const data = await res.json();
+  return data
+}

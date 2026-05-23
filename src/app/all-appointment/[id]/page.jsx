@@ -5,13 +5,12 @@ import React from "react";
 import { MdVerified } from "react-icons/md";
 import ratingImg from "../../../../public/images/rating.png";
 import { FaCalendar } from "react-icons/fa";
+import BookingModal from "@/components/shared/BookingModal";
 
 const DoctorDetailsPage = async ({ params }) => {
   const { id } = await params;
 
   const doctor = await singleDoctorData(id);
-  console.log(doctor);
-
   return (
     <div className="container mx-auto">
       <div className=" lg:flex items-center gap-40 justify-center">
@@ -41,13 +40,21 @@ const DoctorDetailsPage = async ({ params }) => {
                   <div key={ind}>
                     {ind === 0 ? (
                       <div className="flex gap-8 mt-3">
-                        <p className="text-[14px] font-semibold text-[#3E4947]">Mon - Fri</p>
-                        <p className="text-[14px] font-bold text-[#151D1D]">{item}</p>
+                        <p className="text-[14px] font-semibold text-[#3E4947]">
+                          Mon - Fri
+                        </p>
+                        <p className="text-[14px] font-bold text-[#151D1D]">
+                          {item}
+                        </p>
                       </div>
                     ) : (
                       <div className="flex gap-8 mt-3">
-                        <p className="text-[14px] font-semibold text-[#3E4947]">Saturday</p>
-                        <p className="text-[14px] font-bold text-[#151D1D]">{item}</p>
+                        <p className="text-[14px] font-semibold text-[#3E4947]">
+                          Saturday
+                        </p>
+                        <p className="text-[14px] font-bold text-[#151D1D]">
+                          {item}
+                        </p>
                       </div>
                     )}
                   </div>
@@ -72,6 +79,13 @@ const DoctorDetailsPage = async ({ params }) => {
             </p>
           </div>
 
+          <h3 className="mt-3 text-[#3E4947] font-semibold">
+            Fee:{" "}
+            <span className="text-[18px] font-bold text-[#00655C]">
+              {doctor.fee}
+            </span>
+          </h3>
+
           <div className="rounded-xl w-70 md:w-163.75 p-6 mx-auto bg-[#BDC9C6]/30 mt-6">
             <p className=" text-[18px] md:text-[24px] font-semibold text-[#151D1D]">
               About
@@ -81,9 +95,11 @@ const DoctorDetailsPage = async ({ params }) => {
             </p>
           </div>
 
-           <div className=" w-70 md:w-163.75 mx-auto  lg:hidden mt-5 space-y-5 ">
+          <div className=" w-70 md:w-163.75 mx-auto  lg:hidden mt-5 space-y-5 ">
             <div className="bg-[#008075] rounded-xl p-4 text-white">
-              <p className="font-semibold text-[13px] md:text-[24px] ">Clinic Location</p>
+              <p className="font-semibold text-[13px] md:text-[24px] ">
+                Clinic Location
+              </p>
               <p className="text-[#DDFFF8] text-[11px] md:text-[14px] mt-2">
                 {doctor.location}
               </p>
@@ -98,13 +114,21 @@ const DoctorDetailsPage = async ({ params }) => {
                   <div key={ind}>
                     {ind === 0 ? (
                       <div className="flex gap-8 mt-3 justify-center">
-                        <p className="text-[11px] md:text-[14px] font-semibold text-[#3E4947]">Mon - Fri</p>
-                        <p className="text-[11px] md:text-[14px] font-bold text-[#151D1D]">{item}</p>
+                        <p className="text-[11px] md:text-[14px] font-semibold text-[#3E4947]">
+                          Mon - Fri
+                        </p>
+                        <p className="text-[11px] md:text-[14px] font-bold text-[#151D1D]">
+                          {item}
+                        </p>
                       </div>
                     ) : (
                       <div className="flex gap-8 mt-3 justify-center">
-                        <p className="text-[11px] md:text-[14px] font-semibold text-[#3E4947]">Saturday</p>
-                        <p className="text-[11px] md:text-[14px] font-bold text-[#151D1D]">{item}</p>
+                        <p className="text-[11px] md:text-[14px] font-semibold text-[#3E4947]">
+                          Saturday
+                        </p>
+                        <p className="text-[11px] md:text-[14px] font-bold text-[#151D1D]">
+                          {item}
+                        </p>
                       </div>
                     )}
                   </div>
@@ -114,10 +138,8 @@ const DoctorDetailsPage = async ({ params }) => {
           </div>
 
           <div className="flex justify-center">
-
-          <Button className="text-white flex rounded-xl gap-2 items-center bg-[#C64728]  hover:-translate-y-1 transition-all duration-400 md:mx-0 w-70 md:w-163.75  mt-10">Book Appointment <FaCalendar /></Button>
+            <BookingModal doctor={doctor}></BookingModal>
           </div>
-
         </div>
       </div>
     </div>

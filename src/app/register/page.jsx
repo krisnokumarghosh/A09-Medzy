@@ -41,6 +41,12 @@ const RegisterPage = () => {
     }
   };
 
+  const handleGoogle = async () => {
+    const data = await authClient.signIn.social({
+      provider: "google",
+    });
+  };
+
   return (
     <div className="container  mx-auto grid lg:grid-cols-2 justify-items-center items-center">
       <div>
@@ -151,7 +157,10 @@ const RegisterPage = () => {
           <Separator className="w-10 md:w-14 " />
         </div>
 
-        <Button className=" text-[#3E4947] mt-8 md:mt-16 w-full rounded-xl bg-transparent border border-[#BDC9C6] flex items-center gap-2">
+        <Button
+          onClick={handleGoogle}
+          className=" text-[#3E4947] mt-8 md:mt-16 w-full rounded-xl bg-transparent border border-[#BDC9C6] flex items-center gap-2"
+        >
           <FcGoogle />
           Continue With Google
         </Button>

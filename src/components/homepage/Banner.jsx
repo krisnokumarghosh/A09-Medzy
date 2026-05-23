@@ -21,7 +21,7 @@ const Banner = () => {
           <Chip className="text-[#006F66] badge-glow gap-1 px-4 py-1 text-[13px] bg-[#92F0E4] font-semibold">
             <IoShieldCheckmark /> Certified Medical Network
           </Chip>
-          <h1 className=" text-[29px] md:text-[47px] font-bold text-[#151D1D]">
+          <h1 className=" text-[29px] md:text-[48px] font-bold text-[#151D1D]">
             Your Health, Our <br /> Priority
           </h1>
           <p className=" text-[14px] md:text-[18px] text-[#3E4947] md:w-123 w-65 mx-auto lg:mx-0">

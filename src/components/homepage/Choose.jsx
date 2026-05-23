@@ -49,7 +49,7 @@ const Choose = () => {
               <GoCheckCircleFill className="text-[#00655C]" />
               <p className="text-[20px] text-[#151D1D]">Modern Facilities</p>
             </div>
-            <p className="text-[#3E4947]  md:text-[16px] w-70 md:w-115 mx-auto lg:mx-0 mt-2 text-center lg:text-left ml-0 lg:ml-7">
+            <p className="text-[#3E4947]  md:text-[16px] w-70 md:w-115 mx-auto lg:mx-0 mt-2 text-center  lg:text-left ml-0 lg:ml-7">
               Access top-tier clinics equipped with the latest diagnostic and
               treatment technologies.
             </p>
@@ -77,7 +77,9 @@ const Choose = () => {
         </div>
 
         <div className="flex justify-center lg:justify-normal">
-        <Button className="bg-[#00655C] mt-7 text-white rounded-xl  lg:w-full">Discover More Features</Button>
+          <Button className="bg-[#00655C] mt-7 text-white rounded-xl  lg:w-full">
+            Discover More Features
+          </Button>
         </div>
       </div>
     </div>

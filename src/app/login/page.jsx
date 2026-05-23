@@ -36,6 +36,12 @@ const LoginPage = () => {
     }
   };
 
+  const handleGoogle = async () => {
+    const data = await authClient.signIn.social({
+      provider: "google",
+    });
+  };
+
   return (
     <div className="container  mx-auto grid lg:grid-cols-2 justify-items-center items-center">
       <div>
@@ -52,9 +58,7 @@ const LoginPage = () => {
         <h3 className="text-[32px] font-semibold text-[#151D1D] mb-8 md:mb-16">
           Login
         </h3>
-        <Form
-        onSubmit={handleLogIn}
-        >
+        <Form onSubmit={handleLogIn}>
           <TextField
             isRequired
             name="email"
@@ -120,7 +124,10 @@ const LoginPage = () => {
           <Separator className="w-10 md:w-14 " />
         </div>
 
-        <Button className=" text-[#3E4947] mt-8 md:mt-16 w-full rounded-xl bg-transparent border border-[#BDC9C6] flex items-center gap-2">
+        <Button
+          onClick={handleGoogle}
+          className=" text-[#3E4947] mt-8 md:mt-16 w-full rounded-xl bg-transparent border border-[#BDC9C6] flex items-center gap-2"
+        >
           <FcGoogle />
           Continue With Google
         </Button>

@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <div className="bg-[#ECF5F4] py-4 px-3 md:px-16 flex items-center justify-between mb-13 md:mb-25">
-      <div className="flex items-center ">
+      <div className="flex gap-2 items-center ">
         <div className="lg:hidden ">
           <Drawer>
             <Button className="bg-transparent text-[#00655C]">
@@ -65,7 +65,7 @@ const Navbar = () => {
                         {user && (
                           <Button
                             onClick={handleSignOut}
-                            className="rounded-full w-full bg-[#A42F11] text-white"
+                            className="rounded-full md:hidden w-full bg-[#008075] text-white"
                           >
                             Logout
                           </Button>
@@ -112,17 +112,17 @@ const Navbar = () => {
           </div>
         ) : user ? (
           <div className="flex items-center gap-4">
-            <div className=" p-1.25 rounded-full bg-[#008075]">
-              <Image
-                alt="user image"
-                height={35}
-                width={35}
-                src={user?.image}
-              />
-            </div>
+            <Image
+              alt="user image"
+              height={35}
+              width={35}
+              src={user?.image}
+              className="rounded-full"
+            />
+
             <Button
               onClick={handleSignOut}
-              className="rounded-full hidden md:flex bg-[#A42F11] text-white"
+              className="rounded-full hidden md:flex bg-[#008075] text-white"
             >
               Logout
             </Button>
