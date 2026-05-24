@@ -1,7 +1,7 @@
 import DoctorCard from "@/components/shared/DoctorCard";
+import DoctorsWithSearch from "@/components/shared/DoctorsWithSearch";
 import { allDoctors } from "@/lib/api-fetch";
-import { Label, SearchField, Spinner } from "@heroui/react";
-
+import { SearchField } from "@heroui/react";
 
 const AllAppointmentPage = async () => {
   const data = await allDoctors();
@@ -11,19 +11,7 @@ const AllAppointmentPage = async () => {
       <h2 className="font-semibold text-center text-[23px] md:text-[32px] text-[#151D1D]">
         Available Specialists
       </h2>
-      <div className="mt-5 flex justify-center">
-        <input
-          type="text"
-          className=" p-3 md:p-4 border-2 border-[#92F0E4] bg-white rounded-xl  md:w-md  focus:outline-none"
-          placeholder="Search Doctors..."
-        />
-      </div>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center mt-20 ">
-        {data.map((doctor) => {
-          return <DoctorCard key={doctor._id} doctor={doctor}></DoctorCard>;
-        })}
-      </div>
+      <DoctorsWithSearch data={data}></DoctorsWithSearch>
     </div>
   );
 };

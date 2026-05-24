@@ -7,6 +7,10 @@ import BookingDeleteAlert from "./BookingDeleteAlert";
 
 const MyBookings = ({ bookedData }) => {
   return (
+    <div>
+      {
+        bookedData.length ? 
+
     <div className="space-y-8">
       {bookedData.map((data) => {
         return (
@@ -62,6 +66,14 @@ const MyBookings = ({ bookedData }) => {
           </Card>
         );
       })}
+    </div> : 
+    <div className="my-10">
+      <Card className='w-70 md:w-175 mx-auto  p-6 bg-linear-to-l from-[#008075] to-[#00655C]'>
+        <h3 className="text-white text-[25px] text-center font-semibold">No Bookings Available</h3>
+        <p className="text-white/70 text-center">Go to All-Appointment Page to book appointment</p>
+      </Card>
+    </div>
+      }
     </div>
   );
 };
