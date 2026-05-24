@@ -75,7 +75,7 @@ const LoginPage = () => {
               Email
             </Label>
             <Input
-              className="bg-[#ECF5F4] shadow-none border border-[#92F0E4]  md:p-3.5"
+              className="bg-[#ECF5F4] shadow-none border border-[#92F0E4]  md:p-3.5 focus:ring-[#00655C] focus:border-none"
               placeholder="john@example.com"
             />
             <FieldError />
@@ -103,7 +103,7 @@ const LoginPage = () => {
               Password
             </Label>
             <Input
-              className="bg-[#ECF5F4] shadow-none border border-[#92F0E4]  md:p-3.5"
+              className="bg-[#ECF5F4] shadow-none border border-[#92F0E4]  md:p-3.5 focus:ring-[#00655C] focus:border-none"
               placeholder="Enter your password"
             />
             <FieldError />

@@ -2,6 +2,8 @@ import { Button, Card, Chip } from "@heroui/react";
 
 import Image from "next/image";
 import React from "react";
+import UpdateBookingModal from "./UpdateBookingModal";
+import BookingDeleteAlert from "./BookingDeleteAlert";
 
 const MyBookings = ({ bookedData }) => {
   return (
@@ -10,7 +12,7 @@ const MyBookings = ({ bookedData }) => {
         return (
           <Card
             key={data._id}
-            className="w-70 md:w-175 mx-auto md:mx-0 p-6 border-[#00655C] border-l-3"
+            className="w-70 md:w-175 mx-auto md:mx-0 p-6 border-[#00655C] border-l-3 rounded-lg"
           >
             <div className=" md:flex items-center justify-between">
               <div className=" md:flex items-center gap-4">
@@ -41,18 +43,20 @@ const MyBookings = ({ bookedData }) => {
                     Reason: {data.appointmentReason}
                   </p>
                   <p className="text-[14px] text-[#3E4947] font-medium">
+                    Paitent: {data.paitentName}
+                  </p>
+                  <p className="text-[14px] text-[#3E4947] font-medium">
+                    Phone: {data.paitentPhone}
+                  </p>
+                  <p className="text-[14px] text-[#3E4947] font-medium">
                     Date: {data.appointmentDate}
                   </p>
                 </div>
               </div>
 
               <div className="flex md:flex-col justify-center md:justify-items-normal gap-3 mt-4 md:mt-0">
-                <Button className="rounded-xl bg-transparent text-[#00655C] border border-[#00655C]">
-                  Update
-                </Button>
-                <Button className="rounded-xl bg-transparent text-red-500 border border-red-500">
-                  Cancle
-                </Button>
+                <UpdateBookingModal data={data}></UpdateBookingModal>
+                <BookingDeleteAlert data={data}></BookingDeleteAlert>
               </div>
             </div>
           </Card>

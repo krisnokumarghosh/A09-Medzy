@@ -1,6 +1,7 @@
 import { authClient } from "@/lib/auth-client";
 import { successToast } from "@/lib/toasts";
 import { Button, Input, Label, Modal, Surface, TextField } from "@heroui/react";
+
 import { LuPencil } from "react-icons/lu";
 
 const UpdateProfileModal = ({ user }) => {
@@ -14,7 +15,7 @@ const UpdateProfileModal = ({ user }) => {
       image: image,
     });
 
-     successToast("Profile Information Updated");
+    successToast("Profile Information Updated");
   };
 
   return (
@@ -46,19 +47,23 @@ const UpdateProfileModal = ({ user }) => {
                       variant="secondary"
                     >
                       <Label>Name</Label>
-                      <Input />
+                      <Input className="bg-[#ECF5F4] shadow-none focus:ring-[#00655C]" />
                     </TextField>
 
                     <TextField
                       defaultValue={user?.image}
-                      className="w-full"
+                      className="w-full "
                       name="image"
                       variant="secondary"
                     >
                       <Label>Image URL</Label>
-                      <Input />
+                      <Input className="bg-[#ECF5F4] shadow-none  focus:ring-[#00655C]  " />
                     </TextField>
-                    <Button className="mt-4 w-full bg-[#00655C]" slot="close" type="submit">
+                    <Button
+                      className="mt-4 w-full bg-[#00655C]"
+                      slot="close"
+                      type="submit"
+                    >
                       Update
                     </Button>
                   </form>
