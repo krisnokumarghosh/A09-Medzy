@@ -6,6 +6,10 @@
 
 ### Your trusted platform for booking doctor appointments — fast, simple, and secure.
 
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![BetterAuth](https://img.shields.io/badge/BetterAuth-Auth%20System-6366f1?style=for-the-badge)
+
 </div>
 
 ---
@@ -18,7 +22,13 @@
 
 ## 🌐 Live URL
 
-🔗 **[Visit Medzy →](YOUR_LIVE_URL_HERE)**
+🔗 **[Visit Medzy →](https://medzy-iota.vercel.app)**
+
+---
+
+## 🔗 Related Repository
+
+⚙️ **Backend Repository:** [Medzy Server →](https://github.com/krisnokumarghosh/Medzy-Server)
 
 ---
 
@@ -66,7 +76,7 @@
 
 | Layer | Technology |
 |-------|------------|
-| **Frontend** | React |
+| **Frontend** | Nextjs |
 | **UI Library** | HeroUI |
 | **Authentication** | BetterAuth (with MongoDB Adapter) |
 | **Database** | MongoDB |

@@ -111,7 +111,7 @@ const LoginComponent = () => {
               className="w-full bg-[#C64728] rounded-xl text-white"
               type="submit"
             >
-              Sign In
+              Log In
             </Button>
           </div>
         </Form>
