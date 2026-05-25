@@ -4,7 +4,6 @@ import DoctorCard from "../shared/DoctorCard";
 
 const RatedDoctors = async () => {
   const ratedDoctors = await ratedDoctorsData();
-  console.log(ratedDoctors);
 
   return (
     <div className="container mx-auto mb-13 md:mb-25">

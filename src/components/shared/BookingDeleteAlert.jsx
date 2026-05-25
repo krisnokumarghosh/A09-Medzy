@@ -1,5 +1,6 @@
 "use client";
 
+import { authClient } from "@/lib/auth-client";
 import { successToast } from "@/lib/toasts";
 import { AlertDialog, Button } from "@heroui/react";
 import { useRouter } from "next/navigation";
@@ -8,12 +9,17 @@ import React from "react";
 const BookingDeleteAlert = ({ data }) => {
   const router = useRouter();
   const hnadleBookingCancle = async () => {
-    const res = await fetch(`http://localhost:8000/bookings/${data._id}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
+    const { data: tokenData } = await authClient.token();
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/bookings/${data._id}`,
+      {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+          authorization: `Beare ${tokenData?.token}`,
+        },
       },
-    });
+    );
     const result = await res.json();
 
     successToast("Booking Canceled");

@@ -14,25 +14,28 @@ import { LuPencil } from "react-icons/lu";
 import { parseDate } from "@internationalized/date";
 import { successToast } from "@/lib/toasts";
 import { useRouter } from "next/navigation";
+import { authClient } from "@/lib/auth-client";
 
 const UpdateBookingModal = ({ data }) => {
   const router = useRouter();
   const handleUpdateBooking = async (e) => {
     e.preventDefault();
-
+    const { data: tokenData } = await authClient.token();
     const formData = new FormData(e.currentTarget);
     const updatedData = Object.fromEntries(formData.entries());
-    console.log(updatedData);
 
-    const res = await fetch(`http://localhost:8000/bookings/${data._id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/bookings/${data._id}`,
+      {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+          authorization: `Bearer ${tokenData?.token}`,
+        },
+        body: JSON.stringify(updatedData),
       },
-      body: JSON.stringify(updatedData),
-    });
+    );
     const result = await res.json();
-    console.log(result);
 
     successToast("Booking Data Updated");
     router.refresh();

@@ -4,7 +4,6 @@ import Navbar from "@/components/shared/Navbar";
 import { plusJakartaSans } from "@/lib/font";
 import { Toaster } from "react-hot-toast";
 
-
 export const metadata = {
   title: "Medzy",
   description: "Experience clinical precision fused with organic warmth.",
@@ -22,7 +21,7 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
         <Footer></Footer>
 
-        <Toaster position="top-right"/>
+        <Toaster position="top-right" />
       </body>
     </html>
   );

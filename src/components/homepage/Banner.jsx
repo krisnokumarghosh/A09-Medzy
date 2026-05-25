@@ -31,9 +31,9 @@ const Banner = () => {
           </p>
           <div className="md:flex items-center justify-center lg:justify-normal gap-4">
             <Link href={"/all-appointment"}>
-            <Button className="text-white flex rounded-xl gap-2 items-center bg-[#C64728]  hover:-translate-y-1 transition-all duration-400 mx-auto md:mx-0">
-              Book Appointment Now <FaCalendar />
-            </Button>
+              <Button className="text-white flex rounded-xl gap-2 items-center bg-[#C64728]  hover:-translate-y-1 transition-all duration-400 mx-auto md:mx-0">
+                Book Appointment Now <FaCalendar />
+              </Button>
             </Link>
             <Button className="bg-transparent border-2 rounded-xl border-[#00655C] text-[#00655C] transition-all duration-400 hover:bg-[#00655C] hover:-translate-y-1 hover:text-white mt-5 md:mt-0">
               How it Works
@@ -49,11 +49,19 @@ const Banner = () => {
             className="rounded-3xl  mt-10 w-55 md:w-136 lg:mt-0 mx-auto lg:mx-0 "
           />
           <div className="absolute bottom-2 left-17 md:left-31 lg:left-3  backdrop-blur-md bg-cyan-50/40 rounded-2xl border border-white/50 shadow-md p-2 md:p-6 max-w-45 ">
-            <h3 className="font-bold text-[12px] md:text-[24px] text-[#00655C]">4.9/5</h3>
+            <h3 className="font-bold text-[12px] md:text-[24px] text-[#00655C]">
+              4.9/5
+            </h3>
             <div className="flex text-xs md:text-lg items-center gap-1 text-[#A42F11]">
-              <IoStarSharp /><IoStarSharp /><IoStarSharp /><IoStarSharp /><IoStarSharp />
+              <IoStarSharp />
+              <IoStarSharp />
+              <IoStarSharp />
+              <IoStarSharp />
+              <IoStarSharp />
             </div>
-            <p className="text-[8px] md:text-[12px] text-[#3E4947] font-semibold">Average Patient Rating</p>
+            <p className="text-[8px] md:text-[12px] text-[#3E4947] font-semibold">
+              Average Patient Rating
+            </p>
           </div>
         </div>
       </div>

@@ -7,22 +7,23 @@ import { headers } from "next/headers";
 export const generateMetadata = () => {
   return {
     title: "Dasboard | Medzy",
-    
   };
 };
 
-const Dashboard = async() => {
-     const session = await auth.api.getSession({
-        headers: await headers(),
-      });
-      const user = session?.user;
-      console.log(user);
-    
-      const userID = user?.id;
-    
-      const bookedData = await getBookedData(userID);
-      console.log(bookedData);
-    
+const Dashboard = async () => {
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
+  const { token } = await auth.api.getToken({
+    headers: await headers(),
+  });
+
+  const user = session?.user;
+
+  const userID = user?.id;
+
+  const bookedData = await getBookedData(userID, token);
+
   return (
     <div className="container mx-auto">
       <h2 className="font-semibold text-center md:text-left  text-[23px] md:text-[32px] text-[#151D1D]">
@@ -32,8 +33,6 @@ const Dashboard = async() => {
       <div className="mt-10">
         <DashboardTabs bookedData={bookedData}></DashboardTabs>
       </div>
-
-      
     </div>
   );
 };

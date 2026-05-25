@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { FaFacebook, FaStethoscope } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
 import { FaHeartPulse, FaXTwitter } from "react-icons/fa6";
 import { RiInstagramFill } from "react-icons/ri";
 
@@ -22,19 +22,19 @@ const Footer = () => {
             </p>
             <div className="flex gap-3 mt-5">
               <Link
-              href={"/"}
+                href={"/"}
                 className="w-9 h-9 rounded-full border border-white/25 flex items-center justify-center hover:bg-white/15 transition"
               >
                 <FaFacebook />
               </Link>
               <Link
-              href={"/"}
+                href={"/"}
                 className="w-9 h-9 rounded-full border border-white/25 flex items-center justify-center hover:bg-white/15 transition"
               >
                 <RiInstagramFill />
               </Link>
               <Link
-              href={"/"}
+                href={"/"}
                 className="w-9 h-9 rounded-full border border-white/25 flex items-center justify-center hover:bg-white/15 transition"
               >
                 <FaXTwitter />

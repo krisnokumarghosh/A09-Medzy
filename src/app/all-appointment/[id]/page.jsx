@@ -1,24 +1,29 @@
 import { singleDoctorData } from "@/lib/api-fetch";
-import { Button, Chip } from "@heroui/react";
+import { Chip } from "@heroui/react";
 import Image from "next/image";
 import React from "react";
 import { MdVerified } from "react-icons/md";
 import ratingImg from "../../../../public/images/rating.png";
-import { FaCalendar } from "react-icons/fa";
 import BookingModal from "@/components/shared/BookingModal";
+import { auth } from "@/lib/auth";
+import { headers } from "next/headers";
 
 export const generateMetadata = async ({ params }) => {
   const { id } = await params;
   const doctor = await singleDoctorData(id);
   return {
-    title:` ${doctor.name} | Medzy`,
+    title: ` ${doctor.name} | Medzy`,
   };
 };
 
 const DoctorDetailsPage = async ({ params }) => {
   const { id } = await params;
+  const { token } = await auth.api.getToken({
+    headers: await headers(),
+  });
 
-  const doctor = await singleDoctorData(id);
+
+  const doctor = await singleDoctorData(id, token);
   return (
     <div className="container mx-auto">
       <div className=" lg:flex items-center gap-40 justify-center">

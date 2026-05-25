@@ -3,7 +3,6 @@ import React from "react";
 import { FaSearch } from "react-icons/fa";
 import { FaCalendarDays } from "react-icons/fa6";
 import { MdOutlineVideoChat } from "react-icons/md";
-import { SlCalender } from "react-icons/sl";
 
 const Work = () => {
   return (

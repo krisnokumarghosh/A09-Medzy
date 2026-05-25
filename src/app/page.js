@@ -6,7 +6,6 @@ import Work from "@/components/homepage/Work";
 export const generateMetadata = () => {
   return {
     title: "Home | Medzy",
-    
   };
 };
 

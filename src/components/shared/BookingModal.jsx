@@ -16,7 +16,6 @@ const BookingModal = ({ doctor }) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const modalData = Object.fromEntries(formData.entries());
-    console.log(modalData);
 
     const bookingData = {
       userId: user?.id,
@@ -32,12 +31,13 @@ const BookingModal = ({ doctor }) => {
       docorFee: doctor.fee,
     };
 
-    console.log(bookingData);
+    const { data: tokenData } = await authClient.token();
 
-    const res = await fetch(`http://localhost:8000/bookings`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/bookings`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        authorization: `Bearer ${tokenData?.token}`,
       },
       body: JSON.stringify(bookingData),
     });
@@ -198,8 +198,10 @@ const BookingModal = ({ doctor }) => {
                       />
                     </TextField>
 
-                    <Button className="w-full mt-5 bg-[#C64728]" type="submit"
-                    slot="close"
+                    <Button
+                      className="w-full mt-5 bg-[#C64728]"
+                      type="submit"
+                      slot="close"
                     >
                       Book
                     </Button>

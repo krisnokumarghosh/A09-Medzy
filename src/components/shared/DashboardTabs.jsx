@@ -35,7 +35,7 @@ const DashboardTabs = ({ bookedData }) => {
         </div>
       ) : (
         <div className="mt-10">
-            <MyProfile></MyProfile>
+          <MyProfile></MyProfile>
         </div>
       )}
     </div>

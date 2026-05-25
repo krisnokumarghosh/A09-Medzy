@@ -26,10 +26,14 @@ const DoctorCard = ({ doctor }) => {
           </Chip>
         </div>
 
-        <p className="text-[12px] md:text-[14px] mt-2 text-[#00655C]">{doctor.specialty}</p>
+        <p className="text-[12px] md:text-[14px] mt-2 text-[#00655C]">
+          {doctor.specialty}
+        </p>
 
         <Link href={`/all-appointment/${doctor._id}`}>
-        <Button className="text-[#00655C] hover:bg-[#00655C] hover:text-white transition-all duration-300 bg-[#E7F0EF] w-full mt-5 text-[12px] md:text-[14px]">View Details</Button>
+          <Button className="text-[#00655C] hover:bg-[#00655C] hover:text-white transition-all duration-300 bg-[#E7F0EF] w-full mt-5 text-[12px] md:text-[14px]">
+            View Details
+          </Button>
         </Link>
       </div>
     </Card>

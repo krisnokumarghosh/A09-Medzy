@@ -1,6 +1,6 @@
 "use client";
 
-import { Input, SearchField } from "@heroui/react";
+import { Input } from "@heroui/react";
 import React, { useState } from "react";
 import DoctorCard from "./DoctorCard";
 import { FaSearch } from "react-icons/fa";
@@ -11,13 +11,12 @@ const DoctorsWithSearch = ({ data }) => {
   const handleSearch = (e) => {
     e.preventDefault();
     const searchData = e.target.search.value;
-    console.log(searchData);
 
     const filteredData = doctorData.filter((item) =>
       item.name.toLowerCase().includes(searchData.toLowerCase()),
     );
 
-    setDoctorData(filteredData)
+    setDoctorData(filteredData);
   };
 
   return (
