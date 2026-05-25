@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
 
-## Getting Started
+<img src="https://img.shields.io/badge/Medzy-Doctor%20Appointment%20Platform-0ea5e9?style=for-the-badge&logo=react&logoColor=white" alt="Medzy Banner" />
 
-First, run the development server:
+# 🏥 Medzy
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Your trusted platform for booking doctor appointments — fast, simple, and secure.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+</div>
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📌 Purpose
 
-## Learn More
+**Medzy** is a full-stack doctor appointment web application designed to bridge the gap between patients and healthcare professionals. Users can discover top-rated doctors, view their profiles, and book appointments effortlessly — all from one platform. With a personalized dashboard, users can manage their bookings and profile information with ease, while secure authentication ensures a safe and smooth experience.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🌐 Live URL
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🔗 **[Visit Medzy →](YOUR_LIVE_URL_HERE)**
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ✨ Key Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 🏠 Homepage
+- Displays **top-rated doctors** at a glance, giving users instant access to the best healthcare providers on the platform.
+
+### 📋 All Appointments Page
+- Lists **all available doctors** so users can browse, explore, and choose the right specialist for their needs.
+
+### 🔍 Doctor Details Page
+- Clicking the **Details** button on any doctor card:
+  - Redirects **logged-in users** to the doctor's full profile page.
+  - Redirects **unauthenticated users** to the **Login page** to sign in first.
+- On the details page, users can click **Book Appointment** to open a **modal form**.
+- Filling out and submitting the form **confirms the appointment** successfully.
+
+### 📊 User Dashboard
+- **My Appointments Tab**
+  - View all booked appointments in one place.
+  - **Update** or **Delete** any existing appointment.
+- **My Profile Tab**
+  - Displays current profile information.
+  - Click **Update Profile** to edit and save personal details.
+
+### 🔐 Authentication
+- Supports both **Google OAuth** login and **manual registration/login**.
+- Powered by **BetterAuth** with a **MongoDB adapter** for secure, persistent sessions.
+
+---
+
+## 📦 NPM Packages Used
+
+| Package | Purpose |
+|--------|---------|
+| [`react-hot-toast`] | Elegant toast notifications for user feedback |
+| [`heroui`] | Beautiful, accessible UI component library |
+| [`react-icons`] | Comprehensive icon library for React |
+| [`react-fast-marquee`] | For displaying latest news or updates |
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| **Frontend** | React |
+| **UI Library** | HeroUI |
+| **Authentication** | BetterAuth (with MongoDB Adapter) |
+| **Database** | MongoDB |
+| **Notifications** | React Hot Toast |
+| **Icons** | React Icons |
+
+---
+
