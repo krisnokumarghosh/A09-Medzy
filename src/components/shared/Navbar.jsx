@@ -9,6 +9,7 @@ import { FaHeartPulse } from "react-icons/fa6";
 import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
 import { successToast } from "@/lib/toasts";
+import { redirect } from "next/navigation";
 
 const Navbar = () => {
   const { data: session, isPending } = authClient.useSession();
@@ -18,6 +19,7 @@ const Navbar = () => {
     await authClient.signOut();
 
     successToast("Logout Successfull");
+    redirect("/");
   };
 
   return (
@@ -54,12 +56,14 @@ const Navbar = () => {
                         </Navlink>
                       </li>
                       <li>
-                        <Navlink
-                          className="py-2 flex items-center gap-2"
-                          href={"/dashboard"}
-                        >
-                          <Briefcase /> Dashboard
-                        </Navlink>
+                        {user && (
+                          <Navlink
+                            className="py-2 flex items-center gap-2"
+                            href={"/dashboard"}
+                          >
+                            <Briefcase /> Dashboard
+                          </Navlink>
+                        )}
                       </li>
                       <li>
                         {user && (
@@ -98,9 +102,11 @@ const Navbar = () => {
             </Navlink>
           </li>
           <li>
-            <Navlink className="py-2" href={"/dashboard"}>
-              Dashboard
-            </Navlink>
+            {user && (
+              <Navlink className="py-2" href={"/dashboard"}>
+                Dashboard
+              </Navlink>
+            )}
           </li>
         </ul>
       </div>

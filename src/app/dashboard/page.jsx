@@ -4,6 +4,13 @@ import { getBookedData } from "@/lib/api-fetch";
 import { auth } from "@/lib/auth";
 import { headers } from "next/headers";
 
+export const generateMetadata = () => {
+  return {
+    title: "Dasboard | Medzy",
+    
+  };
+};
+
 const Dashboard = async() => {
      const session = await auth.api.getSession({
         headers: await headers(),

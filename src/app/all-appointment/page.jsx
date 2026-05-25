@@ -3,6 +3,14 @@ import DoctorsWithSearch from "@/components/shared/DoctorsWithSearch";
 import { allDoctors } from "@/lib/api-fetch";
 import { SearchField } from "@heroui/react";
 
+
+export const generateMetadata = () => {
+  return {
+    title: "All-Appointment | Medzy",
+    
+  };
+};
+
 const AllAppointmentPage = async () => {
   const data = await allDoctors();
 

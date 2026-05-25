@@ -7,6 +7,14 @@ import ratingImg from "../../../../public/images/rating.png";
 import { FaCalendar } from "react-icons/fa";
 import BookingModal from "@/components/shared/BookingModal";
 
+export const generateMetadata = async ({ params }) => {
+  const { id } = await params;
+  const doctor = await singleDoctorData(id);
+  return {
+    title:` ${doctor.name} | Medzy`,
+  };
+};
+
 const DoctorDetailsPage = async ({ params }) => {
   const { id } = await params;
 
