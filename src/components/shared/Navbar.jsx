@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Spinner, Drawer } from "@heroui/react";
+import { Button, Spinner, Drawer, Avatar } from "@heroui/react";
 import Link from "next/link";
 import { Briefcase, FolderOpenFill, HouseFill } from "@gravity-ui/icons";
 import Navlink from "./Navlink";
@@ -56,14 +56,12 @@ const Navbar = () => {
                         </Navlink>
                       </li>
                       <li>
-                        {user && (
-                          <Navlink
-                            className="py-2 flex items-center gap-2"
-                            href={"/dashboard"}
-                          >
-                            <Briefcase /> Dashboard
-                          </Navlink>
-                        )}
+                        <Navlink
+                          className="py-2 flex items-center gap-2"
+                          href={"/dashboard"}
+                        >
+                          <Briefcase /> Dashboard
+                        </Navlink>
                       </li>
                       <li>
                         {user && (
@@ -102,11 +100,9 @@ const Navbar = () => {
             </Navlink>
           </li>
           <li>
-            {user && (
-              <Navlink className="py-2" href={"/dashboard"}>
-                Dashboard
-              </Navlink>
-            )}
+            <Navlink className="py-2" href={"/dashboard"}>
+              Dashboard
+            </Navlink>
           </li>
         </ul>
       </div>
@@ -122,7 +118,13 @@ const Navbar = () => {
               alt="user image"
               height={35}
               width={35}
-              src={user?.image}
+              src={
+                user?.image || (
+                  <Avatar>
+                    <Avatar.Fallback>user</Avatar.Fallback>
+                  </Avatar>
+                )
+              }
               className="rounded-full"
             />
 
