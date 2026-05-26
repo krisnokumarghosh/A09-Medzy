@@ -10,7 +10,11 @@ import { headers } from "next/headers";
 
 export const generateMetadata = async ({ params }) => {
   const { id } = await params;
-  const doctor = await singleDoctorData(id);
+  const { token } = await auth.api.getToken({
+    headers: await headers(),
+  });
+
+  const doctor = await singleDoctorData(id, token);
   return {
     title: ` ${doctor.name} | Medzy`,
   };
@@ -21,7 +25,6 @@ const DoctorDetailsPage = async ({ params }) => {
   const { token } = await auth.api.getToken({
     headers: await headers(),
   });
-
 
   const doctor = await singleDoctorData(id, token);
   return (
