@@ -1,3 +1,4 @@
+import { CircleFill } from "@gravity-ui/icons";
 import { Button, Card, Chip } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,7 +7,7 @@ import { IoStarSharp } from "react-icons/io5";
 
 const DoctorCard = ({ doctor }) => {
   return (
-    <Card className="p-0 w-65 md:w-92 pb-5 hover:scale-102 transition-all duration-500 md:mt-5 lg:mt-8">
+    <Card className="p-0 w-72 md:w-92 pb-5 shadow-none hover:shadow-2xl hover:shadow-teal-700/25 hover:-translate-y-2 transition-all duration-500 ease-out md:mt-5 lg:mt-8 mx-auto md:mx-0 ">
       <Image
         alt="doctor image"
         height={256}
@@ -25,6 +26,11 @@ const DoctorCard = ({ doctor }) => {
             {doctor.rating}
           </Chip>
         </div>
+
+         <Chip className="mt-3 bg-[#006A62]">
+        <CircleFill width={6} className="text-white"/>
+        <Chip.Label className="text-white">{doctor.experience} Experience</Chip.Label>
+      </Chip>
 
         <p className="text-[12px] md:text-[14px] mt-2 text-[#00655C]">
           {doctor.specialty}

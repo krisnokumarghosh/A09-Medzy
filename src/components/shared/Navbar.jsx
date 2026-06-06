@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Spinner, Drawer, Avatar } from "@heroui/react";
+import { Button, Spinner, Drawer, Avatar, Tabs } from "@heroui/react";
 import Link from "next/link";
 import { Briefcase, FolderOpenFill, HouseFill } from "@gravity-ui/icons";
 import Navlink from "./Navlink";
@@ -67,7 +67,7 @@ const Navbar = () => {
                         {user && (
                           <Button
                             onClick={handleSignOut}
-                            className="rounded-full md:hidden w-full bg-[#008075] text-white"
+                            className="rounded-full md:hidden w-full bg-[#008075]  text-white"
                           >
                             Logout
                           </Button>
@@ -87,8 +87,8 @@ const Navbar = () => {
           <h1 className="text-[#00655C] font-bold text-[24px]">Medzy</h1>
         </Link>
       </div>
-      <div>
-        <ul className="hidden lg:flex gap-6 items-center text-[#3E4947] backdrop-blur-sm bg-cyan-50/40 rounded-full border border-white/50 shadow-md px-7 py-3">
+      <div >
+         <ul className="hidden lg:flex gap-6 items-center text-[#3E4947] rounded-full bg-white shadow-md px-7 py-3">
           <li>
             <Navlink className="py-2" href={"/"}>
               Home
@@ -146,7 +146,7 @@ const Navbar = () => {
               <Button className="bg-[#00655C] rounded-full">Login</Button>
             </Link>
             <Link href={"/register"}>
-              <Button className="bg-[#00655C] rounded-full hidden md:flex">
+              <Button className="bg-[#00655C] hover:bg-teal-600 transition-all duration-200 shadow-lg shadow-teal-700/20 hover:shadow-xl hover:shadow-teal-600/25 hover:-translate-y-0.5 rounded-full hidden md:flex">
                 Register
               </Button>
             </Link>

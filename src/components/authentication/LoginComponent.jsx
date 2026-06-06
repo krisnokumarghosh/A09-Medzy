@@ -52,7 +52,7 @@ const LoginComponent = () => {
         </p>
       </div>
 
-      <div className="bg-white px-7 py-12 md:p-16 w-75 md:w-md mx-auto rounded-xl mt-10 lg:mt-0 shadow-lg shadow-[#008075]/30">
+      <div className="bg-white px-7 py-12 md:p-16 w-75 md:w-md mx-auto rounded-xl mt-10 lg:mt-0 shadow-lg shadow-teal-700/20">
         <h3 className="text-[32px] font-semibold text-[#151D1D] mb-8 md:mb-16">
           Login
         </h3>
